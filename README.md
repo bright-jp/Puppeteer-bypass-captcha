@@ -1,6 +1,6 @@
 # PuppeteerでCAPTCHAをバイパスする
 
-[![Promo](https://github.com/luminati-io/LinkedIn-Scraper/blob/main/Proxies%20and%20scrapers%20GitHub%20bonus%20banner.png)](https://brightdata.jp/products/web-unlocker) 
+[![Promo](https://github.com/bright-jp/LinkedIn-Scraper/blob/main/Proxies%20and%20scrapers%20GitHub%20bonus%20banner.png)](https://brightdata.jp/products/web-unlocker) 
 
 Puppeteerで人間の挙動を模倣してCAPTCHAをバイパスするためのクイックガイドです。ガイドをスキップする場合は、Bright Dataにサインアップして[Web Unlocker API](https://brightdata.jp/products/web-unlocker)をオプトインしてください。 
 
