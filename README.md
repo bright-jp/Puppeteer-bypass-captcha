@@ -1,10 +1,10 @@
-# Bypass CAPTCHAs With Puppeteer
+# PuppeteerでCAPTCHAをバイパスする
 
-[![Promo](https://github.com/luminati-io/LinkedIn-Scraper/blob/main/Proxies%20and%20scrapers%20GitHub%20bonus%20banner.png)](https://brightdata.com/products/web-unlocker) 
+[![Promo](https://github.com/luminati-io/LinkedIn-Scraper/blob/main/Proxies%20and%20scrapers%20GitHub%20bonus%20banner.png)](https://brightdata.jp/products/web-unlocker) 
 
-A quick guide to bypass CAPTCHAs by mimicking human behavior with Puppeteer. Skip the guide by signing up to Bright Data and opting-in for the [Web Unlocker API](https://brightdata.com/products/web-unlocker). 
+Puppeteerで人間の挙動を模倣してCAPTCHAをバイパスするためのクイックガイドです。ガイドをスキップする場合は、Bright Dataにサインアップして[Web Unlocker API](https://brightdata.jp/products/web-unlocker)をオプトインしてください。 
 
-## Step 1: Project Setup
+## Step 1: プロジェクトのセットアップ
 
 ```bash
 mkdir bypass_captcha_puppeteer
@@ -13,7 +13,7 @@ npm init -y
 npm install puppeteer
 ```
 
-Structure:
+構成:
 
 ```bash
 bypass_captcha_puppeteer/
@@ -21,7 +21,7 @@ bypass_captcha_puppeteer/
 └── package.json
 ```
 
-Include ```"type"```: ```"module"``` in ```package.json```:
+```package.json```に```"type"```: ```"module"```を含めます:
 
 ```json
 {
@@ -39,7 +39,7 @@ Include ```"type"```: ```"module"``` in ```package.json```:
 }
 ```
 
-## Step 2: Test Puppeteer (No Stealth)
+## Step 2: Puppeteerをテスト（ステルスなし）
 
 ```javascript
 import puppeteer from 'puppeteer';
@@ -63,21 +63,21 @@ const visitBotAnalyzerPage = async () => {
 visitBotAnalyzerPage();
 ```
 
-Run:
+実行:
 
 ```bash
 node index.js
 ```
 
-You may fail some bot checks, prompting CAPTCHAs.
+一部のボットチェックに失敗し、CAPTCHAが表示される可能性があります。
 
-## Step 3: Install Stealth Plugin
+## Step 3: ステルスプラグインをインストール
 
 ```bash
 npm install puppeteer-extra puppeteer-extra-plugin-stealth
 ```
 
-Replace ```puppeteer``` import with ```puppeteer-extra``` and add the plugin:
+```puppeteer```のimportを```puppeteer-extra```に置き換え、プラグインを追加します:
 
 ```javascript
 import puppeteer from 'puppeteer-extra';
@@ -107,14 +107,14 @@ const visitBotAnalyzerPage = async () => {
 visitBotAnalyzerPage();
 ```
 
-Run again:
+再度実行:
 
 ```bash
 node index.js
 ```
 
-Stealth reduces bot detection and CAPTCHAs.
+ステルスによりボット検知とCAPTCHAが減少します。
 
-## If Stealth Isn’t Enough
+## ステルスだけでは不十分な場合
 
-For advanced WAFs and bot detection, try extra plugins (e.g., ```puppeteer-extra-plugin-anonymize-ua```) or dedicated tools. Tools like [Bright Data’s Web Unlocker API](https://brightdata.com/products/web-unlocker) handle reCAPTCHA, hCaptcha, and a lot more.
+高度なWAFやボット検知に対しては、追加プラグイン（例: ```puppeteer-extra-plugin-anonymize-ua```）または専用ツールを試してください。[Bright Data’s Web Unlocker API](https://brightdata.jp/products/web-unlocker)のようなツールは、reCAPTCHA、hCaptcha、その他多くの要素に対応します。
